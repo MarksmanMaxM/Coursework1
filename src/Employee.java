@@ -2,12 +2,15 @@ public class Employee {
     private String fullName;
     private double salary;
     private String department;
-    private static int id = 0;
+    private int id;
+    private static int count = 1;
+
 
     public Employee(String fullName, double salary, String department) {
         this.fullName = fullName;
         this.salary = salary;
         this.department = department;
+        this.id = count;
         idCount();
     }
 
@@ -28,19 +31,19 @@ public class Employee {
     }
 
     public double getSalary() {
-        return salary;
+        return this.salary;
     }
 
     public String getDepartment() {
-        return department;
+        return this.department;
     }
 
-    public static int getId() {
-        return id;
+    public int getId() {
+        return this.id;
     }
 
     public void idCount() {
-        id++;
+        count++;
     }
 
     @Override
